@@ -265,7 +265,6 @@ body {
     #Ubicación iframe {
         height: 250px;
     }
-}
 /*--- parpadeo reforzado en modo oscuro ---*/
 .dark-mode .foto-perfil {
     animation: parpadeo-oscuro 2.5s ease-in-out infinite;
