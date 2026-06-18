@@ -19,7 +19,6 @@
     --color-logo: #e6f2f0;
 }
 body{
-    font-family: 'segoe ui' , system-ui, sans-serif;
     padding: 0 19px;
     background-color: var(--bg-principal);
     color: var(--texto-principal);
@@ -83,10 +82,11 @@ header {
     border-bottom: 1px solid var(--border-color);
 }
 
-.cv-card h5 {
+.cv-card h3 {
     color: var(--texto-principal);
     margin-top: 16px;
     font-weight: 700;
+    font-size: 1.25rem;
 }
 
 .cv-card hr {
@@ -215,11 +215,7 @@ body {
     object-fit: cover;
     border: 4px solid white;
     flex-shrink: 0;
-    animation: resplandor 3s ease-in-out infinite, parpadeo-imagen 1.5s ease-in-out infinite;
-}
-
-.header-texto h1 {
-    animation: parpadeo-texto 2.5s ease-in-out infinite;
+    animation: resplandor 3s ease-in-out infinite;
 }
 
 @keyframes resplandor {
@@ -237,6 +233,17 @@ body {
 }
 .header-texto {
     flex: 1;
+}
+/*--- parpadeo reforzado en modo oscuro ---*/
+.dark-mode .foto-perfil {
+    animation: parpadeo-oscuro 2.5s ease-in-out infinite;
+}
+@keyframes parpadeo-oscuro {
+    0%   { box-shadow: 0 0 6px 1px rgba(0, 220, 220, 0.3); }
+    25%  { box-shadow: 0 0 14px 4px rgba(0, 220, 220, 0.6); }
+    50%  { box-shadow: 0 0 4px 1px rgba(0, 220, 220, 0.15); }
+    75%  { box-shadow: 0 0 16px 5px rgba(0, 220, 220, 0.65); }
+    100% { box-shadow: 0 0 6px 1px rgba(0, 220, 220, 0.3); }
 }
 /*--- responsivo móvil ---*/
 @media (max-width: 768px) {
@@ -265,15 +272,4 @@ body {
     #Ubicación iframe {
         height: 250px;
     }
-/*--- parpadeo reforzado en modo oscuro ---*/
-.dark-mode .foto-perfil {
-    animation: parpadeo-oscuro 2.5s ease-in-out infinite;
-}
-@keyframes parpadeo-oscuro {
-    0%   { box-shadow: 0 0 6px 1px rgba(0, 220, 220, 0.3); }
-    25%  { box-shadow: 0 0 14px 4px rgba(0, 220, 220, 0.6); }
-    50%  { box-shadow: 0 0 4px 1px rgba(0, 220, 220, 0.15); }
-    75%  { box-shadow: 0 0 16px 5px rgba(0, 220, 220, 0.65); }
-    100% { box-shadow: 0 0 6px 1px rgba(0, 220, 220, 0.3); }
-}
 }
